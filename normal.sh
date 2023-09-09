@@ -17,11 +17,11 @@ KERNEL_DIR="$WORKDIR/PerfDynamicKernel"
 
 # Anykernel3
 ANYKERNEL3_GIT="https://github.com/pure-soul-kk/AnyKernel3"
-ANYKERNEL3_BRANCHE="master"
+ANYKERNEL3_BRANCHE="violet"
 
 # Build
-DEVICES_CODE="sweet"
-DEVICE_DEFCONFIG="vendor/sweet_perf_defconfig"
+DEVICES_CODE="violet"
+DEVICE_DEFCONFIG="vendor/violet_perf_defconfig"
 DEVICE_DEFCONFIG_FILE="$KERNEL_DIR/arch/arm64/configs/$DEVICE_DEFCONFIG"
 IMAGE="$KERNEL_DIR/out/arch/arm64/boot/Image.gz"
 DTB="$KERNEL_DIR/out/arch/arm64/boot/dtb.img"
