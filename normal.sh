@@ -11,23 +11,23 @@ ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230
 ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
-KERNEL_GIT="https://github.com/itsshashanksp/kernel_xiaomi_sm6150.git"
+KERNEL_GIT="https://github.com/pure-soul-kk/kernel_xiaomi_sm6150"
 KERNEL_BRANCHE="perf"
-KERNEL_DIR="$WORKDIR/PerfDynamicKernel"
+KERNEL_DIR="$WORKDIR/Perf"
 
 # Anykernel3
-ANYKERNEL3_GIT="https://github.com/xiaomi-davinci/AnyKernel3.git"
+ANYKERNEL3_GIT="https://github.com/pure-soul-kk/AnyKernel3"
 ANYKERNEL3_BRANCHE="master"
 
 # Build
-DEVICES_CODE="davinci"
-DEVICE_DEFCONFIG="vendor/davinci_perf_defconfig"
+DEVICES_CODE="sweet"
+DEVICE_DEFCONFIG="vendor/sweet_perf_defconfig"
 DEVICE_DEFCONFIG_FILE="$KERNEL_DIR/arch/arm64/configs/$DEVICE_DEFCONFIG"
 IMAGE="$KERNEL_DIR/out/arch/arm64/boot/Image.gz"
 DTB="$KERNEL_DIR/out/arch/arm64/boot/dtb.img"
 DTBO="$KERNEL_DIR/out/arch/arm64/boot/dtbo.img"
 
-export KBUILD_BUILD_USER=AMWolfstein
+export KBUILD_BUILD_USER=krishna
 export KBUILD_BUILD_HOST=GitHubCI
 
 msg() {
@@ -96,9 +96,9 @@ cp $DTB $WORKDIR/Anykernel3/dtb
 cp $DTBO .
 
 # PACK FILE
-time=$(TZ='Africa/Cairo' date +"%Y-%m-%d %H:%M:%S")
-cairo_time=$(TZ='Africa/Cairo' date +%Y%m%d%H)
-ZIP_NAME="PerfDynamicKernel-$KERNEL_VERSION.zip"
+time=$(TZ='Asia/Kolkata' date +"%Y-%m-%d %H:%M:%S")
+cairo_time=$(TZ='Asia/Kolkata' date +%Y%m%d%H)
+ZIP_NAME="Perf-$KERNEL_VERSION.zip"
 find ./ * -exec touch -m -d "$time" {} \;
 zip -r9 $ZIP_NAME *
 mkdir -p $WORKDIR/out && cp *.zip $WORKDIR/out
