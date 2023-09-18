@@ -11,8 +11,8 @@ ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230
 ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
-KERNEL_GIT="https://github.com/pure-soul-kk/kernel_xiaomi_sm6150"
-KERNEL_BRANCHE="sleepy"
+KERNEL_GIT="https://github.com/krishna0997x/kernel_xiaomi_sm6150.git"
+KERNEL_BRANCHE="perf-ln8k"
 KERNEL_DIR="$WORKDIR/Perf"
 
 # Anykernel3
@@ -118,14 +118,14 @@ cp $DTBO .
 # PACK FILE
 time=$(TZ='Asia/Kolkata' date +"%Y-%m-%d %H:%M:%S")
 cairo_time=$(TZ='Asia/Kolkata' date +%Y%m%d%H)
-ZIP_NAME="Sleepy-$KERNEL_VERSION-KernelSU-$KERNELSU_VERSION.zip"
+ZIP_NAME="Perf-$KERNEL_VERSION-KernelSU-$KERNELSU_VERSION.zip"
 find ./ * -exec touch -m -d "$time" {} \;
 zip -r9 $ZIP_NAME *
 mkdir -p $WORKDIR/out && cp *.zip $WORKDIR/out
 
 cd $WORKDIR/out
 echo "
-### Sleepy KERNEL With/Without KERNELSU
+### Perf KERNEL With/Without KERNELSU
 1. **Time** : $(TZ='Asia/Kolkata' date +"%Y-%m-%d %H:%M:%S") # Asia TIME
 2. **Device Code** : $DEVICES_CODE
 3. **LINUX Version** : $KERNEL_VERSION
@@ -134,7 +134,7 @@ echo "
 6. **LLD Version**: $LLD_VERSION
 " > RELEASE.md
 echo "
-### Sleepy KERNEL With/Without KERNELSU
+### Perf KERNEL With/Without KERNELSU
 1. **Time** : $(TZ='Asia/Kolkata' date +"%Y-%m-%d %H:%M:%S") # Asia TIME
 2. **Device Code** : $DEVICES_CODE
 3. **LINUX Version** : $KERNEL_VERSION
@@ -142,7 +142,7 @@ echo "
 5. **CLANG Version**: ZyC clang version 18.0.0
 6. **LLD Version**: LLD 18.0.0
 " > telegram_message.txt
-echo "Sleepy-$KERNEL_VERSION" > RELEASETITLE.txt
+echo "Perf-$KERNEL_VERSION" > RELEASETITLE.txt
 cat RELEASE.md
 cat telegram_message.txt
 cat RELEASETITLE.txt
