@@ -11,8 +11,8 @@ ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230
 ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
-KERNEL_GIT="https://github.com/pure-soul-kk/kernel_xiaomi_sm6150"
-KERNEL_BRANCHE="sleepy"
+KERNEL_GIT="https://github.com/krishna0997x/kernel_xiaomi_sm6150.git"
+KERNEL_BRANCHE="perf-ln8k"
 KERNEL_DIR="$WORKDIR/Perf"
 
 # Anykernel3
@@ -98,7 +98,7 @@ cp $DTBO .
 # PACK FILE
 time=$(TZ='Asia/Kolkata' date +"%Y-%m-%d %H:%M:%S")
 cairo_time=$(TZ='Asia/Kolkata' date +%Y%m%d%H)
-ZIP_NAME="Sleepy-$KERNEL_VERSION.zip"
+ZIP_NAME="Perf-$KERNEL_VERSION.zip"
 find ./ * -exec touch -m -d "$time" {} \;
 zip -r9 $ZIP_NAME *
 mkdir -p $WORKDIR/out && cp *.zip $WORKDIR/out
