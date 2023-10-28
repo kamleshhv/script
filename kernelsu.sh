@@ -7,12 +7,12 @@
 WORKDIR="$(pwd)"
 
 # ZyClang
-ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230809-release/Clang-18.0.0-20230809.tar.gz"
+ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20231026-release/Clang-18.0.0-20231026.tar.gz"
 ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
 KERNEL_GIT="https://github.com/pure-soul-kk/android_kernel_xiaomi_sm6150"
-KERNEL_BRANCHE="13"
+KERNEL_BRANCHE="14
 KERNEL_DIR="$WORKDIR/vantom"
 
 # Anykernel3
