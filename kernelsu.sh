@@ -12,7 +12,7 @@ ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
 KERNEL_GIT="https://github.com/pure-soul-kk/android_kernel_xiaomi_sm6150"
-KERNEL_BRANCHE="14
+KERNEL_BRANCHE="14"
 KERNEL_DIR="$WORKDIR/vantom"
 
 # Anykernel3
