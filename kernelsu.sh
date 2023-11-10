@@ -74,7 +74,7 @@ done
 }
 apply_patchs
 
-sed -i "/CONFIG_LOCALVERSION=\"/s/"/" $DEVICE_DEFCONFIG_FILE
+sed -i "/CONFIG_LOCALVERSION=\"/s/.$/-KSU-$KERNELSU_VERSION\"/" $DEVICE_DEFCONFIG_FILE
 
 # BUILD KERNEL
 msg " • 🌸 Started Compilation 🌸 "
