@@ -7,12 +7,12 @@
 WORKDIR="$(pwd)"
 
 # ZyClang
-ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20231114-release/Clang-18.0.0-20231114.tar.gz"
+ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/16.0.6-20231003-release/Clang-16.0.6-20231003.tar.gz"
 ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
 KERNEL_GIT="https://github.com/pure-soul-kk/kernel_xiaomi_sm6150"
-KERNEL_BRANCHE="uno"
+KERNEL_BRANCHE="perf"
 KERNEL_DIR="$WORKDIR/Perf"
 
 # Anykernel3
