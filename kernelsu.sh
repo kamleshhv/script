@@ -7,7 +7,7 @@
 WORKDIR="$(pwd)"
 
 # ZyClang
-ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/16.0.6-20231003-release/Clang-16.0.6-20231003.tar.gz"
+ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20231118-release/Clang-18.0.0-20231118.tar.gz"
 ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
