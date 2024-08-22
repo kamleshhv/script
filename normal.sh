@@ -11,8 +11,8 @@ ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230
 ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
 
 # Kernel Source
-KERNEL_GIT="https://github.com/pure-soul-kk/kernel_xiaomi_sm6150"
-KERNEL_BRANCHE="perf"
+KERNEL_GIT="https://github.com/kamleshhv/kernel_xiaomi_sweet"
+KERNEL_BRANCHE="14"
 KERNEL_DIR="$WORKDIR/Perf"
 
 # Anykernel3
@@ -21,7 +21,7 @@ ANYKERNEL3_BRANCHE="master"
 
 # Build
 DEVICES_CODE="sweet"
-DEVICE_DEFCONFIG="vendor/sweet_perf_defconfig"
+DEVICE_DEFCONFIG="vendor/sweet_defconfig"
 DEVICE_DEFCONFIG_FILE="$KERNEL_DIR/arch/arm64/configs/$DEVICE_DEFCONFIG"
 IMAGE="$KERNEL_DIR/out/arch/arm64/boot/Image.gz"
 DTB="$KERNEL_DIR/out/arch/arm64/boot/dtb.img"
@@ -98,7 +98,7 @@ cp $DTBO .
 # PACK FILE
 time=$(TZ='Asia/Kolkata' date +"%Y-%m-%d %H:%M:%S")
 asia_time=$(TZ='Asia/Kolkata' date +%Y%m%d%H)
-ZIP_NAME="Perf-$KERNEL_VERSION.zip"
+ZIP_NAME="Strixx-$KERNEL_VERSION.zip"
 find ./ * -exec touch -m -d "$time" {} \;
 zip -r9 $ZIP_NAME *
 mkdir -p $WORKDIR/out && cp *.zip $WORKDIR/out
