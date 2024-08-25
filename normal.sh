@@ -7,8 +7,9 @@
 WORKDIR="$(pwd)"
 
 # ZyClang
-ZYCLANG_DLINK="https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230725-release/Clang-17.0.0-20230725.tar.gz"
-ZYCLANG_DIR="$WORKDIR/ZyClang/bin"
+mkdir clang; cd clang;curl -LO "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman";
+chmod +x antman; ./antman -S=05012024; ./antman --patch=glibc;sed -i '/CLANG_EXTRA_FLAGS += --hip-path=\/dev\/null/d'
+ZYCLANG_DIR="$WORKDIR/clang/bin"
 
 # Kernel Source
 KERNEL_GIT="https://github.com/kamleshhv/kernel_xiaomi_sweet"
@@ -37,15 +38,6 @@ msg() {
 }
 
 cd $WORKDIR
-
-# Download ZyClang
-msg " • 🌸 Work on $WORKDIR 🌸"
-msg " • 🌸 Cloning Toolchain 🌸 "
-rm -rf ZyClang
-mkdir -p ZyClang
-aria2c -s16 -x16 -k1M $ZYCLANG_DLINK -o ZyClang.tar.gz
-tar -C ZyClang/ -zxvf ZyClang.tar.gz
-rm -rf ZyClang.tar.gz
 
 # CLANG LLVM VERSIONS
 CLANG_VERSION="$($ZYCLANG_DIR/clang --version | head -n 1)"
